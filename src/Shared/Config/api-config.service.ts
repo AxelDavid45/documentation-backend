@@ -16,4 +16,8 @@ export class ApiConfigService {
   get appPort(): number {
     return this.configService.get('PORT');
   }
+
+  get hashSaltsPasswords(): number {
+    return this.configService.get('HASH_SALTS_PASSWORDS');
+  }
 }
