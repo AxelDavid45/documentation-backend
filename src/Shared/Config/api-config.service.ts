@@ -20,4 +20,11 @@ export class ApiConfigService {
   get hashSaltsPasswords(): number {
     return this.configService.get('HASH_SALTS_PASSWORDS');
   }
+
+  get jwtConfigs() {
+    return {
+      secret: this.configService.get('JWT_SECRET'),
+      expiresIn: this.configService.get('JWT_TTL'),
+    };
+  }
 }
